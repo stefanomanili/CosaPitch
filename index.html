@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosaporto – Company Profile</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1e2a5e;--gold:#d4a02a;--green:#1a6b4a;--wine:#7b1b2e;
+  --bg:#f2f3f8;--wh:#fff;--tx:#111827;--mu:#6b7280;--ln:#e4e6ef;
+  --n10:rgba(30,42,94,.08);--g10:rgba(212,160,42,.10);
+  --gr10:rgba(26,107,74,.09);--w10:rgba(123,27,46,.09);
+  --n20:rgba(30,42,94,.18);--g20:rgba(212,160,42,.20);
+  --gr20:rgba(26,107,74,.18);--w20:rgba(123,27,46,.18);
+}
+body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--tx);padding:36px 16px 80px;-webkit-font-smoothing:antialiased}
+nav{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin-bottom:44px}
+nav a{text-decoration:none;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);padding:7px 14px;border:2px solid var(--navy);border-radius:4px;transition:background .18s,color .18s}
+nav a:hover{background:var(--navy);color:#fff}
+.slide{max-width:960px;margin:0 auto 52px;background:var(--wh);border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 4px 24px rgba(0,0,0,.06);overflow:hidden}
+.sh{display:flex;align-items:center;gap:14px;padding:0 32px;height:62px;border-bottom:3px solid var(--ln)}
+.ha{width:5px;height:34px;border-radius:3px;flex-shrink:0}
+.hn{font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
+.ht{font-size:17px;font-weight:800;letter-spacing:-.01em;color:var(--tx)}
+.hi{margin-left:auto;opacity:.15}
+.ico{display:block;flex-shrink:0}
+.sb{padding:28px 32px 32px}
+.dv{height:1px;background:var(--ln);margin:20px 0}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:3px}
+.tn{background:var(--n10);color:var(--navy)}.tg{background:var(--g10);color:var(--gold)}.tgr{background:var(--gr10);color:var(--green)}.tw{background:var(--w10);color:var(--wine)}
+.note{font-size:12.5px;color:var(--mu);line-height:1.7;padding:12px 16px;background:var(--g10);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;margin-bottom:22px}
+.note strong{color:var(--tx);font-weight:700}
+.note-gr{background:var(--gr10);border-color:var(--green)}.note-n{background:var(--n10);border-color:var(--navy)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px}
+.card{border-radius:5px;padding:20px;border:1.5px solid var(--ln)}
+.cn{border-color:var(--navy);background:var(--n10)}.cg{border-color:var(--gold);background:var(--g10)}.cgr{border-color:var(--green);background:var(--gr10)}.cw{border-color:var(--wine);background:var(--w10)}
+.ctop{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.ci{width:38px;height:38px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-n{background:var(--navy)}.ci-g{background:var(--gold)}.ci-gr{background:var(--green)}.ci-w{background:var(--wine)}
+.cl{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.cl-n{color:var(--navy)}.cl-g{color:var(--gold)}.cl-gr{color:var(--green)}.cl-w{color:var(--wine)}
+.ctt{font-size:13px;font-weight:700}
+.cd{font-size:12px;color:var(--mu);line-height:1.55;margin-top:6px}
+.cst{font-size:26px;font-weight:900;letter-spacing:-.02em;line-height:1;margin-top:10px}
+.cst-n{color:var(--navy)}.cst-g{color:var(--gold)}.cst-gr{color:var(--green)}.cst-w{color:var(--wine)}
+.cst small{font-size:11px;font-weight:500;color:var(--mu);margin-left:4px;vertical-align:middle}
+.csub{font-size:12px;font-weight:700;margin-top:5px}
+.tb{width:100%;border-collapse:collapse}
+.tb thead th{padding:11px 16px;text-align:left;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#fff}
+.th-n{background:var(--navy)}.th-gr{background:var(--green)}.th-w{background:var(--wine)}.th-g{background:var(--gold)}
+.tb tbody tr{border-bottom:1px solid var(--ln)}
+.tb tbody tr:last-child{border-bottom:none}
+.tb tbody tr:nth-child(even){background:#f9fafb}
+.tb tbody td{padding:14px 16px;vertical-align:middle;font-size:12.5px;color:#374151;line-height:1.5}
+.tb tbody td:first-child{width:200px}
+.occ{display:flex;align-items:center;gap:10px}
+.oi{width:32px;height:32px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.oi-g{background:var(--gold)}.oi-gr{background:var(--green)}.oi-w{background:var(--wine)}.oi-n{background:var(--navy)}
+.os{font-size:10px;color:var(--mu);margin-top:3px;font-weight:500}
+.il{display:flex;flex-direction:column;gap:5px}
+.ir{display:flex;align-items:flex-start;gap:8px;font-size:12.5px;line-height:1.4}
+.bi{flex-shrink:0;margin-top:1px}
+.pyr{display:flex;flex-direction:column;gap:10px}
+.pr{display:flex;align-items:center;gap:16px;padding:14px 20px;border-radius:5px;border-left:5px solid}
+.t1{background:var(--gr10);border-color:var(--green)}.t2{background:var(--g10);border-color:var(--gold)}.t3{background:var(--w10);border-color:var(--wine)}.t4{background:var(--n10);border-color:var(--navy)}
+.pi{width:38px;height:38px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.t1 .pi{background:var(--green)}.t2 .pi{background:var(--gold)}.t3 .pi{background:var(--wine)}.t4 .pi{background:var(--navy)}
+.pl{font-size:13px;font-weight:800;min-width:180px}
+.t1 .pl{color:var(--green)}.t2 .pl{color:var(--gold)}.t3 .pl{color:var(--wine)}.t4 .pl{color:var(--navy)}
+.pd{font-size:12px;color:#374151;line-height:1.5}
+.pbar{margin-top:16px;padding:16px 20px;background:var(--navy);border-radius:5px;color:#fff}
+.ptop{display:flex;align-items:center;gap:8px;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.roles{display:flex;flex-wrap:wrap;gap:8px}
+.rt{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.11);padding:6px 13px;border-radius:3px;font-size:10.5px;font-weight:700}
+.ac{border-radius:5px;border:1.5px solid var(--ln);overflow:hidden}
+.ach{display:flex;align-items:center;gap:11px;padding:12px 18px;border-bottom:1px solid var(--ln)}
+.ach.w{background:var(--wine)}.ach.gr{background:var(--green)}.ach.g{background:var(--gold)}.ach.n{background:var(--navy)}
+.ach h3{font-size:11px;font-weight:800;color:#fff;letter-spacing:.06em;text-transform:uppercase}
+.ab{padding:16px 18px;display:flex;flex-direction:column;gap:11px}
+.ai{display:flex;align-items:center;gap:11px}
+.aii{width:30px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.aii-w{background:var(--w10)}.aii-gr{background:var(--gr10)}.aii-g{background:var(--g10)}.aii-n{background:var(--n10)}
+.an{font-size:19px;font-weight:900;letter-spacing:-.02em;line-height:1}
+.an.sm{font-size:12px;font-weight:700}
+.an-w{color:var(--wine)}.an-gr{color:var(--green)}.an-g{color:var(--gold)}.an-n{color:var(--navy)}
+.al{font-size:10.5px;color:var(--mu);margin-top:2px;font-weight:500}
+.wc{border-radius:5px;overflow:hidden;border:1.5px solid var(--ln)}
+.wch{padding:12px 16px;display:flex;align-items:center;gap:10px}
+.wch.g{background:var(--gold)}.wch.gr{background:var(--green)}.wch.w{background:var(--wine)}
+.wch h3{font-size:11px;font-weight:800;color:#fff;letter-spacing:.06em;text-transform:uppercase}
+.wcb{padding:14px 16px;font-size:12.5px;color:#374151;line-height:1.6}
+.bb{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:var(--n10);border:1.5px solid var(--navy);border-radius:4px;font-size:11px;font-weight:700;color:var(--navy);margin-top:16px}
+.sc2{border-radius:5px;padding:20px;border-top:4px solid;display:flex;flex-direction:column;gap:10px}
+.sc2.gr{border-color:var(--green);background:var(--gr10)}.sc2.g{border-color:var(--gold);background:var(--g10)}
+.sc2.n{border-color:var(--navy);background:var(--n10)}.sc2.w{border-color:var(--wine);background:var(--w10)}
+.st{display:flex;align-items:center;gap:10px}
+.si{width:36px;height:36px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sc2.gr .si{background:var(--green)}.sc2.g .si{background:var(--gold)}.sc2.n .si{background:var(--navy)}.sc2.w .si{background:var(--wine)}
+.stit{font-size:13px;font-weight:800}
+.sc2.gr .stit{color:var(--green)}.sc2.g .stit{color:var(--gold)}.sc2.n .stit{color:var(--navy)}.sc2.w .stit{color:var(--wine)}
+.sdesc{font-size:12px;color:#374151;line-height:1.6}
+.ca{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start}
+.clg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.lb{border:1.5px solid var(--ln);border-radius:4px;padding:10px 8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--navy);min-height:42px;text-align:center;line-height:1.2}
+.pli{display:flex;flex-direction:column;gap:8px}
+.pit{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:4px;background:var(--n10);border:1px solid var(--n20);font-size:11.5px;font-weight:700;color:var(--navy)}
+.slbl{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);margin-bottom:10px}
+.pies{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pic{border-radius:5px;padding:18px;border:1.5px solid var(--ln)}
+.pict{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mu);margin-bottom:14px}
+.pbrs{display:flex;flex-direction:column;gap:8px}
+.pbr{display:flex;align-items:center;gap:10px}
+.pbl{font-size:11px;font-weight:600;width:70px;flex-shrink:0}
+.pbw{flex:1;background:var(--ln);border-radius:3px;height:12px;overflow:hidden}
+.pbf{height:100%;border-radius:3px}
+.pbp{font-size:12px;font-weight:800;width:36px;text-align:right}
+.pien{font-size:12px;color:var(--mu);line-height:1.6;padding:12px 14px;background:var(--n10);border-left:3px solid var(--navy);border-radius:0 4px 4px 0;margin-top:14px}
+.bmt{width:100%;border-collapse:collapse;font-size:12px}
+.bmt th{padding:10px 14px;text-align:left;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--navy);color:#fff;border-right:1px solid rgba(255,255,255,.15)}
+.bmt td{padding:12px 14px;border-bottom:1px solid var(--ln);vertical-align:top;line-height:1.5;color:#374151;border-right:1px solid var(--ln)}
+.bmt tr:nth-child(even) td{background:#f9fafb}
+.bmt .rl{font-size:9px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);background:var(--n10)!important;width:130px}
+.bg2{font-weight:700;color:var(--gold)}.bgr2{font-weight:700;color:var(--green)}.bw2{font-weight:700;color:var(--wine)}
+.capg{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.capt{width:100%;border-collapse:collapse}
+.capt th{padding:8px 12px;text-align:left;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--navy);color:#fff}
+.capt td{padding:10px 12px;border-bottom:1px solid var(--ln);font-size:12px;vertical-align:middle}
+.capt tr:last-child td{border-bottom:none}
+.capt td:first-child{font-weight:700;color:var(--navy)}
+.cbr{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.cbl{font-size:11px;font-weight:700;width:115px;flex-shrink:0}
+.cbw{flex:1;background:var(--ln);border-radius:3px;height:10px;overflow:hidden}
+.cbf{height:100%;border-radius:3px}
+.cbv{font-size:11px;font-weight:800;width:34px;text-align:right}
+.tr2{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--n10);border:1.5px solid var(--navy);border-radius:5px;margin-bottom:16px}
+.tv{font-size:28px;font-weight:900;color:var(--navy);letter-spacing:-.02em}
+.tl{font-size:11px;color:var(--mu);font-weight:600;line-height:1.4}
+.tg2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tc{border-radius:5px;padding:22px;border:1.5px solid var(--ln);display:flex;flex-direction:column;gap:14px}
+.tav{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#fff;flex-shrink:0}
+.ttop{display:flex;align-items:center;gap:14px}
+.tnm{font-size:15px;font-weight:800;color:var(--tx)}
+.tro{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+.texp{display:flex;flex-wrap:wrap;gap:6px}
+.etag{font-size:10px;font-weight:600;padding:3px 9px;border-radius:3px;background:var(--n10);color:var(--navy)}
+.tp2{display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--n10);border:1.5px solid var(--navy);border-radius:5px;margin-top:14px}
+.tpv{font-size:28px;font-weight:900;color:var(--navy)}
+.tpl{font-size:12px;color:var(--mu);font-weight:600}
+.ig2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.icard{border-radius:5px;padding:20px;border-top:4px solid}
+.icard.n{border-color:var(--navy);background:var(--n10)}.icard.g{border-color:var(--gold);background:var(--g10)}.icard.w{border-color:var(--wine);background:var(--w10)}
+.ict{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.iico{width:38px;height:38px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.icard.n .iico{background:var(--navy)}.icard.g .iico{background:var(--gold)}.icard.w .iico{background:var(--wine)}
+.itit{font-size:13px;font-weight:800}
+.icard.n .itit{color:var(--navy)}.icard.g .itit{color:var(--gold)}.icard.w .itit{color:var(--wine)}
+.idesc{font-size:12px;color:var(--mu);line-height:1.6}
+.bpleg{display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+.bpli{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600}
+.bpd{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.bpbars{display:flex;flex-direction:column;gap:16px}
+.bpy{display:flex;align-items:center;gap:16px}
+.bpyl{font-size:11px;font-weight:800;color:var(--navy);width:44px;flex-shrink:0}
+.bpbi{flex:1;display:flex;flex-direction:column;gap:5px}
+.bpbr{display:flex;align-items:center;gap:8px}
+.bpbg{flex:1;background:var(--ln);border-radius:3px;height:10px;overflow:hidden}
+.bpbf{height:100%;border-radius:3px}
+.bpbv{font-size:11px;font-weight:700;min-width:56px;text-align:right}
+.bpbn{font-size:10px;color:var(--mu);width:48px;font-weight:600;flex-shrink:0}
+.proj{border-left:3px solid var(--gold);padding-left:10px;margin-left:-13px}
+.blg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.blr{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.bll{font-size:11px;font-weight:600;width:42px;flex-shrink:0}
+.blbw{flex:1;background:var(--ln);border-radius:3px;height:12px;overflow:hidden}
+.blb{height:100%;border-radius:3px}
+.blv{font-size:12px;font-weight:800;width:48px;text-align:right}
+.gmg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.gmc{border-radius:5px;padding:18px;border:1.5px solid var(--ln);text-align:center}
+.gmy{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mu);margin-bottom:12px}
+.gmr{display:flex;justify-content:space-around;gap:8px}
+.gmi{display:flex;flex-direction:column;align-items:center;gap:4px}
+.gml{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.gmv{font-size:22px;font-weight:900;letter-spacing:-.02em}
+.pos{color:var(--green)}.neg{color:var(--wine)}
+.costg{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px}
+.costc{border-radius:5px;padding:16px;border:1.5px solid var(--ln)}
+.costl{font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--ln)}
+.cyr{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.cyl{font-size:10px;font-weight:600;color:var(--mu)}
+.cyv{font-size:14px;font-weight:800}
+.cyb{height:5px;border-radius:3px;margin-top:2px;margin-bottom:9px}
+.scon{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.scc{border-radius:5px;border:1.5px solid var(--ln);overflow:hidden}
+.sch{padding:10px 16px;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#fff}
+.scb{padding:16px}
+.scr{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--ln)}
+.scr:last-child{border-bottom:none}
+.scy{font-size:11px;font-weight:600;color:var(--mu)}
+.scv{font-size:18px;font-weight:900}
+@media(max-width:640px){
+  .g2,.g3,.g4,.gmg,.costg,.tg2,.ig2,.blg,.scon,.clg,.ca,.pies,.capg{grid-template-columns:1fr}
+  .sb{padding:20px}.sh{padding:0 20px}.pl{min-width:110px}
+}</style>
+</head>
+<body>
+<nav><a href="#p2">Chi Siamo</a><a href="#p3">Mercato</a><a href="#p4">Problema</a><a href="#p5">Soluzione</a><a href="#p6">Semplificare</a><a href="#p7">Target</a><a href="#p8">Clienti</a><a href="#p9">Cat. &amp; Gift.</a><a href="#p10">Asset</a><a href="#p11">Biz. Model</a><a href="#p12">Fundraising</a><a href="#p13">Team</a><a href="#p14">Investimenti</a><a href="#p15">BP</a><a href="#p16">Biz. Lines</a><a href="#p17">Scontrino</a><a href="#p18">Gross Margin</a><a href="#p19">Costi</a></nav>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol id="i-fork" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.66 1.34 3 3 3s3-1.34 3-3V2"/><line x1="6" y1="12" x2="6" y2="22"/><path d="M21 2c0 4-2.5 7-5 8v12"/></symbol>
+<symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+<symbol id="i-db" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></symbol>
+<symbol id="i-coffee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-xc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+<symbol id="i-bld" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></symbol>
+<symbol id="i-brief" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="2" y1="12" x2="22" y2="12"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></symbol>
+<symbol id="i-uc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+<symbol id="i-mega" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+<symbol id="i-mon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></symbol>
+<symbol id="i-laptop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+<symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M9 9v12M15 9v12"/></symbol>
+<symbol id="i-pkg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></symbol>
+<symbol id="i-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+<symbol id="i-funnel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></symbol>
+<symbol id="i-uten" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="2" x2="3" y2="22"/><path d="M7 2v7a5 5 0 0 0 5 5v7"/><path d="M7 5h5m-5 3h5m-5-6h5"/></symbol>
+<symbol id="i-puzzle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-3.408 0l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 2c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-woff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.56 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></symbol>
+<symbol id="i-coin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+<symbol id="i-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></symbol>
+<symbol id="i-rcpt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l3-2 2 2 3-2 3 2 2-2 3 2V2l-3 2-2-2-3 2-3-2-2 2-3-2z"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/></symbol>
+<symbol id="i-set" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></symbol>
+</svg>
+<div class="slide" id="p2"><div class="sh"><div class="sh"><div class="ha" style="background:var(--navy)"></div><span class="hn">PAG 2</span><span class="ht">Chi Siamo</span><svg class="ico hi" width="30" height="30" style="color:var(--navy)"><use href="#i-globe"/></svg></div></div><div class="sb"><p class="note"><strong>Prima tech-company italiana</strong> nel catering e nella regalistica aziendale. Uniamo selezione di brand d'eccellenza e potenza tecnologica. <strong>Società Benefit dal 2023.</strong></p>
+<div class="g3">
+  <div class="wc"><div class="wch g"><svg class="ico" width="17" height="17" style="color:#fff"><use href="#i-coffee"/></svg> <h3>Business Delivery</h3></div><div class="wcb">Ordini food high-end per l'ufficio, multi-brand, via sito/app con consegna in città.</div></div>
+  <div class="wc"><div class="wch gr"><svg class="ico" width="17" height="17" style="color:#fff"><use href="#i-users"/></svg> <h3>Catering ed Eventi</h3></div><div class="wcb">Gestione completa eventi aziendali: preventivi in 2h, varietà di brand, servizi on-site.</div></div>
+  <div class="wc"><div class="wch w"><svg class="ico" width="17" height="17" style="color:#fff"><use href="#i-gift"/></svg> <h3>Corporate Gifting</h3></div><div class="wcb">Regali multi-brand con consegna door-to-door, dashboard tracking e personalizzazione completa.</div></div>
+</div>
+<div class="bb"><svg class="ico" width="15" height="15" style="color:var(--navy)"><use href="#i-star"/></svg> Società Benefit dal 2023</div></div></div>
+<div class="slide" id="p3"><div class="sh"><div class="sh"><div class="ha" style="background:var(--gold)"></div><span class="hn">PAG 3</span><span class="ht">Il Mercato</span><svg class="ico hi" width="30" height="30" style="color:var(--gold)"><use href="#i-chart"/></svg></div></div><div class="sb"><p class="note"><strong>Mercato in forte crescita</strong> in Italia e Europa — Corporate Events CAGR +5% | Corporate Gifting CAGR +9% (2023–2030).</p>
+<div class="g2">
+  <div class="card cgr"><div class="ctop"><div class="ci ci-gr"><svg class="ico" width="19" height="19" style="color:#fff"><use href="#i-fork"/></svg></div><div><div class="cl cl-gr">Corporate Events</div><div class="ctt">Catering &amp; food B2B</div></div></div><div class="cd">Servizi food aziendali: dalla colazione agli eventi su scala.</div><div class="cst cst-gr">€7B<small>SAM Italia</small></div><div class="csub" style="color:var(--green)">SOM (1%) = €70M</div></div>
+  <div class="card cw"><div class="ctop"><div class="ci ci-w"><svg class="ico" width="19" height="19" style="color:#fff"><use href="#i-gift"/></svg></div><div><div class="cl cl-w">Corporate Gifting</div><div class="ctt">Regali aziendali Natale &amp; Pasqua</div></div></div><div class="cd">Per clienti, dipendenti e partner di business.</div><div class="cst cst-w">€1,5B<small>SAM Italia</small></div><div class="csub" style="color:var(--wine)">SOM (1%) = €15M</div></div>
+</div>
+<div class="dv"></div>
+<p class="slbl">Opportunità di mercato</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+  <div style="display:flex;align-items:center;gap:7px;padding:9px 14px;border-radius:4px;font-size:11.5px;font-weight:600;background:var(--w10);border:1.5px solid var(--w20);color:var(--wine)"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-puzzle"/></svg> Mercato frammentato</div>
+  <div style="display:flex;align-items:center;gap:7px;padding:9px 14px;border-radius:4px;font-size:11.5px;font-weight:600;background:var(--w10);border:1.5px solid var(--w20);color:var(--wine)"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-pin"/></svg> Operatori su scala locale</div>
+  <div style="display:flex;align-items:center;gap:7px;padding:9px 14px;border-radius:4px;font-size:11.5px;font-weight:600;background:var(--w10);border:1.5px solid var(--w20);color:var(--wine)"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-woff"/></svg> Basso livello di digitalizzazione</div>
+</div></div></div>
+<div class="slide" id="p4"><div class="sh"><div class="sh"><div class="ha" style="background:var(--wine)"></div><span class="hn">PAG 4</span><span class="ht">Il Problema</span><svg class="ico hi" width="30" height="30" style="color:var(--wine)"><use href="#i-alert"/></svg></div></div><div class="sb"><table class="tb">
+<thead><tr><th class="th-n">Occasione</th><th class="th-n">Offerta attuale</th><th class="th-n">Problemi corporate</th></tr></thead>
+<tbody>
+<tr><td><div class="occ"><div class="oi oi-g"><svg class="ico" width="14" height="14" style="color:#fff"><use href="#i-coffee"/></svg></div><div><div class="tag tg">Piccolo catering</div><div class="os">Max 30 persone · Poco preavviso</div></div></div></td><td>Bar vicino ufficio<br>Delivery B2C (Glovo, Deliveroo)</td><td><div class="il"><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-xc"/></svg> Qualità inadatta al B2B</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-xc"/></svg> Note spese individuali</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-xc"/></svg> Acquisto via telefono / negozio</div></div></td></tr>
+<tr><td><div class="occ"><div class="oi oi-gr"><svg class="ico" width="14" height="14" style="color:#fff"><use href="#i-users"/></svg></div><div><div class="tag tgr">Evento grande</div><div class="os">+30 pax · Personale, location, allestimento</div></div></div></td><td>Catering tradizionale<br>Agenzie eventi</td><td><div class="il"><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-xc"/></svg> Poca varietà</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-xc"/></svg> Bassa competenza organizzativa</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-xc"/></svg> Tempi di risposta lunghi</div></div></td></tr>
+<tr><td><div class="occ"><div class="oi oi-w"><svg class="ico" width="14" height="14" style="color:#fff"><use href="#i-gift"/></svg></div><div><div class="tag tw">Corporate Gifting</div><div class="os">Personalizzazioni · Door-to-door · Charity</div></div></div></td><td>Gifting tradizionale (no digital)<br>Singolo produttore</td><td><div class="il"><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-xc"/></svg> Troppi interlocutori</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-xc"/></svg> Nessun tracking consegne</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--wine)"><use href="#i-xc"/></svg> Poca scelta</div></div></td></tr>
+</tbody></table></div></div>
+<div class="slide" id="p5"><div class="sh"><div class="sh"><div class="ha" style="background:var(--green)"></div><span class="hn">PAG 5</span><span class="ht">La Soluzione Cosaporto</span><svg class="ico hi" width="30" height="30" style="color:var(--green)"><use href="#i-shield"/></svg></div></div><div class="sb"><table class="tb">
+<thead><tr><th class="th-gr">Occasione</th><th class="th-gr">Cosa offre Cosaporto</th></tr></thead>
+<tbody>
+<tr><td><div class="occ"><div class="oi oi-g"><svg class="ico" width="14" height="14" style="color:#fff"><use href="#i-coffee"/></svg></div><div class="tag tg">Piccolo catering</div></div></td><td><div class="il"><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--green)"><use href="#i-check"/></svg> Sito/App per Business Delivery high-end</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--green)"><use href="#i-check"/></svg> Prodotti e processi pensati per l'ufficio</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--green)"><use href="#i-check"/></svg> Ordini multi-brand e multi-città</div></div></td></tr>
+<tr><td><div class="occ"><div class="oi oi-gr"><svg class="ico" width="14" height="14" style="color:#fff"><use href="#i-users"/></svg></div><div class="tag tgr">Evento grande</div></div></td><td><div class="il"><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--green)"><use href="#i-check"/></svg> One-stop shop per tutti i servizi</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--green)"><use href="#i-check"/></svg> Almeno 3 preventivi in 2 ore</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--green)"><use href="#i-check"/></svg> Varietà di brand anche nello stesso evento</div></div></td></tr>
+<tr><td><div class="occ"><div class="oi oi-w"><svg class="ico" width="14" height="14" style="color:#fff"><use href="#i-gift"/></svg></div><div class="tag tw">Corporate Gifting</div></div></td><td><div class="il"><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--green)"><use href="#i-check"/></svg> Multi-brand o brand mix per singolo regalo</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--green)"><use href="#i-check"/></svg> Web page "ClickmyGift" per consegne door-to-door</div><div class="ir"><svg class="ico" width="14" height="14" style="color:var(--green)"><use href="#i-check"/></svg> Dashboard real-time per il tracking consegne</div></div></td></tr>
+</tbody></table></div></div>
+<div class="slide" id="p6"><div class="sh"><div class="sh"><div class="ha" style="background:var(--green)"></div><span class="hn">PAG 6</span><span class="ht">Semplificare la Gestione</span><svg class="ico hi" width="30" height="30" style="color:var(--green)"><use href="#i-set"/></svg></div></div><div class="sb"><div class="g2">
+<div class="sc2 gr"><div class="st"><div class="si"><svg class="ico" width="18" height="18" style="color:#fff"><use href="#i-uc"/></svg></div><div class="stit">Consulente Dedicato</div></div><div class="sdesc">Una persona sola, niente rimbalzi, risposta veloce, preventivi in 2H. Zero passaggi di mano.</div></div>
+<div class="sc2 g"><div class="st"><div class="si"><svg class="ico" width="18" height="18" style="color:#fff"><use href="#i-chart"/></svg></div><div class="stit">Dashboard Costi</div></div><div class="sdesc">Tutto sotto controllo. Report online real-time per centri di costo o business unit.</div></div>
+<div class="sc2 n"><div class="st"><div class="si"><svg class="ico" width="18" height="18" style="color:#fff"><use href="#i-rcpt"/></svg></div><div class="stit">Fattura a Fine Mese</div></div><div class="sdesc">Semplifica contabilità e approvazioni interne. Zero anticipi da parte del cliente.</div></div>
+<div class="sc2 w"><div class="st"><div class="si"><svg class="ico" width="18" height="18" style="color:#fff"><use href="#i-layers"/></svg></div><div class="stit">Gestione End to End</div></div><div class="sdesc">Catering. Gifting. In ogni sede. Per ogni budget. Solo di alta qualità.</div></div>
+</div></div></div>
+<div class="slide" id="p7"><div class="sh"><div class="sh"><div class="ha" style="background:var(--navy)"></div><span class="hn">PAG 7</span><span class="ht">I Nostri Clienti Target</span><svg class="ico hi" width="30" height="30" style="color:var(--navy)"><use href="#i-target"/></svg></div></div><div class="sb"><div class="pyr">
+<div class="pr t1"><div class="pi"><svg class="ico" width="18" height="18" style="color:#fff"><use href="#i-zap"/></svg></div><div class="pl">Tech &amp; Scale-up</div><div class="pd">Alto budget welfare · Cultura innovativa · Focus sul cliente</div></div>
+<div class="pr t2"><div class="pi"><svg class="ico" width="18" height="18" style="color:#fff"><use href="#i-bld"/></svg></div><div class="pl">Corporate</div><div class="pd">Molte occasioni · Presenza multi-sede · Alto potenziale up/cross-selling</div></div>
+<div class="pr t3"><div class="pi"><svg class="ico" width="18" height="18" style="color:#fff"><use href="#i-brief"/></svg></div><div class="pl">Professional Service</div><div class="pd">Eventi client-facing ricorrenti · Acquisto regali aziendali</div></div>
+<div class="pr t4"><div class="pi"><svg class="ico" width="18" height="18" style="color:#fff"><use href="#i-flag"/></svg></div><div class="pl">Fiere</div><div class="pd">Volumi concentrati · Partnership pluriennali</div></div>
+</div>
+<div class="pbar">
+  <div class="ptop"><svg class="ico" width="13" height="13" style="color:#fff"><use href="#i-uc"/></svg> Buyer Personas</div>
+  <div class="roles">
+    <span class="rt"><svg class="ico" width="12" height="12" style="color:#fff"><use href="#i-heart"/></svg> HR</span>
+    <span class="rt"><svg class="ico" width="12" height="12" style="color:#fff"><use href="#i-mega"/></svg> Marketing</span>
+    <span class="rt"><svg class="ico" width="12" height="12" style="color:#fff"><use href="#i-cal"/></svg> Event Manager</span>
+    <span class="rt"><svg class="ico" width="12" height="12" style="color:#fff"><use href="#i-mon"/></svg> Office Manager</span>
+    <span class="rt"><svg class="ico" width="12" height="12" style="color:#fff"><use href="#i-cart"/></svg> Procurement</span>
+  </div>
+</div></div></div>
+<div class="slide" id="p8"><div class="sh"><div class="ha" style="background:var(--gold)"></div><span class="hn">PAG 8</span><span class="ht">Clienti e Partnership</span><svg class="ico hi" width="30" height="30" style="color:var(--gold)"><use href="#i-star"/></svg></div><div class="sb"><div style="display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start">
+  <div>
+    <p style="font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:12px">Clienti</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px"><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#f0faf4;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#1DB954;line-height:1.2;">Spotify</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#f0f0ff;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#2E2EFF;line-height:1.2;">Bending Spoons</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#fff5ee;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#FF6B00;line-height:1.2;">facile.it</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#eef2fa;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Georgia,serif;font-weight:700;font-size:12px;color:#003087;line-height:1.2;">J.P. Morgan</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#eef4fb;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#005BAA;line-height:1.2;">Italgas</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#f7eeff;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:300;font-size:12px;color:#a100ff;line-height:1.2;">accenture</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#edfaf5;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#009966;line-height:1.2;">BNL · BNP Paribas</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#eef2fa;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:600;font-size:12px;color:#003087;line-height:1.2;">Intesa Sanpaolo</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#edf5fd;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#016FD0;line-height:1.2;">American Express</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#f5f5f5;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Georgia,serif;font-weight:400;font-size:12px;color:#1a1a2e;line-height:1.2;">ernestomeda</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#fff8ee;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#231F20;line-height:1.2;">mastercard</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#fffbea;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:800;font-size:12px;color:#1a1a2e;line-height:1.2;">Sisal</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#fafafa;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Georgia,serif;font-weight:400;font-size:12px;color:#1a1a2e;line-height:1.2;">GUCCI</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#f5f5f5;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:900;font-size:12px;color:#1a1a2e;line-height:1.2;">YOOX</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#f5f5f5;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:300;font-size:12px;color:#1a1a2e;line-height:1.2;">FEDRIGONI</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#fff8ee;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#FF9900;line-height:1.2;">amazon</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#fff0f0;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#EF1C25;line-height:1.2;">Satispay</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#fafafa;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Georgia,serif;font-weight:400;font-size:12px;color:#1a1a2e;line-height:1.2;">DIOR</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#eef2fa;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#003087;line-height:1.2;">PayPal</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#eef2fa;min-height:54px;display:flex;align-items:center;justify-content:center;padding:8px 10px;text-align:center;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#003580;line-height:1.2;">Booking.com</span></div></div>
+  </div>
+  <div>
+    <p style="font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:12px">Partnership</p>
+    <div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#fff3ee;min-height:46px;display:flex;align-items:center;padding:10px 14px;margin-bottom:8px;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#F05A28;">Talent Garden</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#eef0fa;min-height:46px;display:flex;align-items:center;padding:10px 14px;margin-bottom:8px;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#1e2a5e;">The Innovation Group</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#eef2fa;min-height:46px;display:flex;align-items:center;padding:10px 14px;margin-bottom:8px;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#003781;">Allianz MiCo</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#f2faee;min-height:46px;display:flex;align-items:center;padding:10px 14px;margin-bottom:8px;"><span style="font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;color:#6CC04A;">Netcomm Forum</span></div><div style="border:1.5px solid #e4e6ef;border-radius:5px;background:#fdf8ee;min-height:46px;display:flex;align-items:center;padding:10px 14px;margin-bottom:8px;"><span style="font-family:Georgia,serif;font-weight:600;font-size:12px;color:#C8A96E;">Packaging Première</span></div>
+  </div>
+</div></div></div>
+<div class="slide" id="p9"><div class="sh"><div class="sh"><div class="ha" style="background:var(--navy)"></div><span class="hn">PAG 9</span><span class="ht">Catering e Gifting</span><svg class="ico hi" width="30" height="30" style="color:var(--navy)"><use href="#i-layers"/></svg></div></div><div class="sb"><div class="pies">
+  <div class="pic"><div class="pict">Valori €</div><div class="pbrs">
+    <div class="pbr"><span class="pbl" style="color:var(--navy)">Catering</span><div class="pbw"><div class="pbf" style="width:65%;background:var(--navy)"></div></div><span class="pbp" style="color:var(--navy)">65%</span></div>
+    <div class="pbr"><span class="pbl" style="color:var(--green)">Regali</span><div class="pbw"><div class="pbf" style="width:35%;background:var(--green)"></div></div><span class="pbp" style="color:var(--green)">35%</span></div>
+  </div></div>
+  <div class="pic"><div class="pict">Aziende</div><div class="pbrs">
+    <div class="pbr"><span class="pbl" style="color:var(--navy)">Catering</span><div class="pbw"><div class="pbf" style="width:55%;background:var(--navy)"></div></div><span class="pbp" style="color:var(--navy)">55%</span></div>
+    <div class="pbr"><span class="pbl" style="color:var(--green)">Regali</span><div class="pbw"><div class="pbf" style="width:30%;background:var(--green)"></div></div><span class="pbp" style="color:var(--green)">30%</span></div>
+    <div class="pbr"><span class="pbl" style="color:var(--gold)">Entrambi</span><div class="pbw"><div class="pbf" style="width:15%;background:var(--gold)"></div></div><span class="pbp" style="color:var(--gold)">15%</span></div>
+  </div></div>
+</div>
+<div class="pien">Il <strong>Catering</strong> è il core-business. Il <strong>Gifting</strong> alimenta awareness e acquisizione nuovi clienti B2B.</div></div></div>
+<div class="slide" id="p10"><div class="sh"><div class="sh"><div class="ha" style="background:var(--navy)"></div><span class="hn">PAG 10</span><span class="ht">Asset</span><svg class="ico hi" width="30" height="30" style="color:var(--navy)"><use href="#i-db"/></svg></div></div><div class="sb"><div class="g3">
+  <div class="ac"><div class="ach w"><svg class="ico" width="17" height="17" style="color:#fff"><use href="#i-laptop"/></svg> <h3>Tecnologia</h3></div><div class="ab">
+    <div class="ai"><div class="aii aii-w"><svg class="ico" width="12" height="12" style="color:var(--wine)"><use href="#i-mon"/></svg></div><div><div class="an sm an-w">Sito / App</div><div class="al">Piattaforma consumer &amp; B2B</div></div></div>
+    <div class="ai"><div class="aii aii-w"><svg class="ico" width="12" height="12" style="color:var(--wine)"><use href="#i-truck"/></svg></div><div><div class="an sm an-w">Delivery &amp; Dropshipping</div><div class="al">Gestione ordini end-to-end</div></div></div>
+    <div class="ai"><div class="aii aii-w"><svg class="ico" width="12" height="12" style="color:var(--wine)"><use href="#i-store"/></svg></div><div><div class="an sm an-w">Piattaforma Negozi</div><div class="al">Rete partner &amp; brand</div></div></div>
+    <div class="ai"><div class="aii aii-w"><svg class="ico" width="12" height="12" style="color:var(--wine)"><use href="#i-pkg"/></svg></div><div><div class="an sm an-w">Piattaforma Corrieri</div><div class="al">Logistica last-mile</div></div></div>
+  </div></div>
+  <div class="ac"><div class="ach gr"><svg class="ico" width="17" height="17" style="color:#fff"><use href="#i-users"/></svg> <h3>Community</h3></div><div class="ab">
+    <div class="ai"><div class="aii aii-gr"><svg class="ico" width="12" height="12" style="color:var(--green)"><use href="#i-person"/></svg></div><div><div class="an an-gr">130.000</div><div class="al">Clienti B2C</div></div></div>
+    <div class="ai"><div class="aii aii-gr"><svg class="ico" width="12" height="12" style="color:var(--green)"><use href="#i-bld"/></svg></div><div><div class="an an-gr">2.800</div><div class="al">Clienti B2B attivi</div></div></div>
+    <div class="ai"><div class="aii aii-gr"><svg class="ico" width="12" height="12" style="color:var(--green)"><use href="#i-funnel"/></svg></div><div><div class="an an-gr">17.000</div><div class="al">Lead B2B in pipeline</div></div></div>
+    <div class="ai"><div class="aii aii-gr"><svg class="ico" width="12" height="12" style="color:var(--green)"><use href="#i-pin"/></svg></div><div><div class="an an-gr">200</div><div class="al">Negozi &amp; partner catering</div></div></div>
+  </div></div>
+  <div class="ac"><div class="ach g"><svg class="ico" width="17" height="17" style="color:#fff"><use href="#i-box"/></svg> <h3>Operazioni</h3></div><div class="ab">
+    <div class="ai"><div class="aii aii-g"><svg class="ico" width="12" height="12" style="color:var(--gold)"><use href="#i-box"/></svg></div><div><div class="an an-g">8.000</div><div class="al">Prodotti a catalogo</div></div></div>
+    <div class="ai"><div class="aii aii-g"><svg class="ico" width="12" height="12" style="color:var(--gold)"><use href="#i-truck"/></svg></div><div><div class="an an-g">300.000</div><div class="al">Delivery gestiti</div></div></div>
+    <div class="ai"><div class="aii aii-g"><svg class="ico" width="12" height="12" style="color:var(--gold)"><use href="#i-file"/></svg></div><div><div class="an an-g">5.400</div><div class="al">Preventivi catering &amp; gifting</div></div></div>
+    <div class="ai"><div class="aii aii-g"><svg class="ico" width="12" height="12" style="color:var(--gold)"><use href="#i-cal"/></svg></div><div><div class="an an-g">&gt;2.000</div><div class="al">Eventi catering gestiti</div></div></div>
+    <div class="ai"><div class="aii aii-g"><svg class="ico" width="12" height="12" style="color:var(--gold)"><use href="#i-uten"/></svg></div><div><div class="an an-g">&gt;100</div><div class="al">Menu catering a catalogo</div></div></div>
+  </div></div>
+</div></div></div>
+<div class="slide" id="p11"><div class="sh"><div class="sh"><div class="ha" style="background:var(--navy)"></div><span class="hn">PAG 11</span><span class="ht">Business Model</span><svg class="ico hi" width="30" height="30" style="color:var(--navy)"><use href="#i-layers"/></svg></div></div><div class="sb"><table class="bmt">
+<thead><tr><th style="width:130px"></th><th><span style="color:var(--gold)">●</span> Business Delivery</th><th><span style="color:var(--green)">●</span> Catering ed Eventi</th><th><span style="color:var(--wine)">●</span> Corporate Gifting</th></tr></thead>
+<tbody>
+<tr><td class="rl">Canale Vendita</td><td class="bg2">Sito / App</td><td class="bgr2">Preventivo Offline</td><td class="bw2">20% Sito/App · 80% Offline</td></tr>
+<tr><td class="rl">Revenue Model</td><td class="bg2">25–30% fee su gross sales + consegna</td><td class="bgr2">18–25% fee + mark up servizi</td><td class="bw2">25–30% margine + mark up + consegna</td></tr>
+<tr><td class="rl">Customer Acquisition</td><td class="bg2">Digital Mktg (Conversion)</td><td class="bgr2">Digital Mktg · Sales Hunting · Eventi</td><td class="bw2">Digital Mktg · Sales Hunting · Eventi</td></tr>
+<tr><td class="rl">Operating Model</td><td class="bg2">Delivery in città full outsourcing</td><td class="bgr2">Operations CP solo grandi eventi</td><td class="bw2">Packing &amp; Shipping outsourcing · Dropshipping</td></tr>
+</tbody></table></div></div>
+<div class="slide" id="p12"><div class="sh"><div class="sh"><div class="ha" style="background:var(--gold)"></div><span class="hn">PAG 12</span><span class="ht">Fundraising e Cap Table</span><svg class="ico hi" width="30" height="30" style="color:var(--gold)"><use href="#i-trend"/></svg></div></div><div class="sb"><div class="capg">
+<div>
+  <div class="tr2"><svg class="ico" width="26" height="26" style="color:var(--navy)"><use href="#i-coin"/></svg><div><div class="tv">€6,5M</div><div class="tl">Totale raccolto in round multipli<br>da VC, Istituzionali e Business Angels</div></div></div>
+  <p class="slbl" style="margin-bottom:12px">Cap Table</p>
+  <div class="cbr"><span class="cbl" style="color:var(--navy)">Founder</span><div class="cbw"><div class="cbf" style="width:35%;background:var(--navy)"></div></div><span class="cbv" style="color:var(--navy)">35%</span></div>
+  <div class="cbr"><span class="cbl" style="color:var(--mu)">Business Angels</span><div class="cbw"><div class="cbf" style="width:30%;background:var(--mu)"></div></div><span class="cbv" style="color:var(--mu)">30%</span></div>
+  <div class="cbr"><span class="cbl" style="color:var(--wine)">Lazio Innova</span><div class="cbw"><div class="cbf" style="width:18%;background:var(--wine)"></div></div><span class="cbv" style="color:var(--wine)">18%</span></div>
+  <div class="cbr"><span class="cbl" style="color:var(--gold)">Azimut</span><div class="cbw"><div class="cbf" style="width:6%;background:var(--gold)"></div></div><span class="cbv" style="color:var(--gold)">6%</span></div>
+  <div class="cbr"><span class="cbl" style="color:var(--green)">Boost Heroes</span><div class="cbw"><div class="cbf" style="width:6%;background:var(--green)"></div></div><span class="cbv" style="color:var(--green)">6%</span></div>
+  <div class="cbr"><span class="cbl" style="color:var(--mu)">Employees</span><div class="cbw"><div class="cbf" style="width:5%;background:#9ca3af"></div></div><span class="cbv" style="color:var(--mu)">5%</span></div>
+</div>
+<div>
+  <p class="slbl" style="margin-bottom:12px">Timeline Round</p>
+  <table class="capt">
+    <thead><tr><th>Anno</th><th>Round</th><th>Importo</th><th>Investitori</th></tr></thead>
+    <tbody>
+      <tr><td>2017</td><td>Pre-Seed</td><td>€120K</td><td>Family &amp; Friends</td></tr>
+      <tr><td>2018</td><td>Pre-Seed</td><td>€140K</td><td>Boost Heroes + Business Angels</td></tr>
+      <tr><td>2020</td><td>Seed</td><td>€1,5M</td><td>Lazio Innova + Business Angels</td></tr>
+      <tr><td>2022</td><td>Round A</td><td>€4,7M</td><td>Lazio Innova + Azimut + Crowdfunding</td></tr>
+    </tbody>
+  </table>
+</div>
+</div></div></div>
+<div class="slide" id="p13"><div class="sh"><div class="sh"><div class="ha" style="background:var(--green)"></div><span class="hn">PAG 13</span><span class="ht">Team</span><svg class="ico hi" width="30" height="30" style="color:var(--green)"><use href="#i-users"/></svg></div></div><div class="sb"><p class="note">C-Level di consolidata esperienza in <strong>Consulenza Strategica, IT, Operations, Digital Marketing, Sales.</strong></p>
+<div class="tg2">
+  <div class="tc"><div class="ttop"><div class="tav" style="background:var(--navy)">SM</div><div><div class="tnm">Stefano Manili</div><div class="tro" style="color:var(--navy)">CEO</div></div></div><div class="texp"><span class="etag">Accenture</span><span class="etag">Conte.it – Admiral</span><span class="etag">HDI Assicurazioni</span></div></div>
+  <div class="tc"><div class="ttop"><div class="tav" style="background:var(--green)">MA</div><div><div class="tnm">Marco Arese</div><div class="tro" style="color:var(--green)">CCO</div></div></div><div class="texp"><span class="etag">Arval</span><span class="etag">FCA</span></div></div>
+</div>
+<div class="tp2"><div class="tpv">+10</div><div class="tpl">giovani talenti motivati nel team operativo</div></div></div></div>
+<div class="slide" id="p14"><div class="sh"><div class="sh"><div class="ha" style="background:var(--gold)"></div><span class="hn">PAG 14</span><span class="ht">Aree di Investimento</span><svg class="ico hi" width="30" height="30" style="color:var(--gold)"><use href="#i-trend"/></svg></div></div><div class="sb"><p class="note">Cosaporto ha identificato le aree dove investire per valorizzare quanto realizzato e <strong>scalare il mercato.</strong></p>
+<div class="ig2">
+<div class="icard n"><div class="ict"><div class="iico"><svg class="ico" width="18" height="18" style="color:#fff"><use href="#i-mega"/></svg></div><div class="itit">Marketing</div></div><div class="idesc">Grazie all'esperienza nel digital marketing, Cosaporto ha identificato i funnel più efficaci di acquisizione e retention.</div></div>
+<div class="icard g"><div class="ict"><div class="iico"><svg class="ico" width="18" height="18" style="color:#fff"><use href="#i-users"/></svg></div><div class="itit">Sales People</div></div><div class="idesc">I processi CRM collaudati consentono l'inserimento di figure junior mantenendo sostenibile il costo del personale.</div></div>
+<div class="icard w"><div class="ict"><div class="iico"><svg class="ico" width="18" height="18" style="color:#fff"><use href="#i-cpu"/></svg></div><div class="itit">Tecnologia</div></div><div class="idesc">Nuove soluzioni AI per ampliare la suite di servizi e digitalizzare i processi, conquistando clienti a costi bassi.</div></div>
+</div></div></div>
+<div class="slide" id="p15"><div class="sh"><div class="sh"><div class="ha" style="background:var(--navy)"></div><span class="hn">PAG 15</span><span class="ht">Business Plan</span><svg class="ico hi" width="30" height="30" style="color:var(--navy)"><use href="#i-chart"/></svg></div></div><div class="sb"><div class="bpleg"><div class="bpli"><div class="bpd" style="background:var(--navy)"></div>Revenues (K€)</div><div class="bpli"><div class="bpd" style="background:var(--green)"></div>EBITDA pos.</div><div class="bpli"><div class="bpd" style="background:var(--wine)"></div>EBITDA / EBIT neg.</div></div>
+<div class="bpbars">
+<div class="bpy"><span class="bpyl" style="color:var(--navy)">2023</span><div class="bpbi"><div class="bpbr"><span class="bpbn" style="color:var(--navy)">Rev</span><div class="bpbg"><div class="bpbf" style="width:35%;background:var(--navy);opacity:1"></div></div><span class="bpbv" style="color:var(--navy)">1.988</span></div><div class="bpbr"><span class="bpbn" style="color:var(--wine)">EBITDA</span><div class="bpbg"><div class="bpbf" style="width:19%;background:var(--wine);opacity:1"></div></div><span class="bpbv" style="color:var(--wine)">–1.053</span></div><div class="bpbr"><span class="bpbn" style="color:var(--wine)">EBIT</span><div class="bpbg"><div class="bpbf" style="width:31%;background:var(--wine);opacity:0.5"></div></div><span class="bpbv" style="color:var(--wine)">–1.757</span></div></div></div>
+<div class="bpy"><span class="bpyl" style="color:var(--navy)">2024</span><div class="bpbi"><div class="bpbr"><span class="bpbn" style="color:var(--navy)">Rev</span><div class="bpbg"><div class="bpbf" style="width:42%;background:var(--navy);opacity:1"></div></div><span class="bpbv" style="color:var(--navy)">2.385</span></div><div class="bpbr"><span class="bpbn" style="color:var(--wine)">EBITDA</span><div class="bpbg"><div class="bpbf" style="width:10%;background:var(--wine);opacity:1"></div></div><span class="bpbv" style="color:var(--wine)">–574</span></div><div class="bpbr"><span class="bpbn" style="color:var(--wine)">EBIT</span><div class="bpbg"><div class="bpbf" style="width:19%;background:var(--wine);opacity:0.5"></div></div><span class="bpbv" style="color:var(--wine)">–1.072</span></div></div></div>
+<div class="bpy"><span class="bpyl" style="color:var(--navy)">2025</span><div class="bpbi"><div class="bpbr"><span class="bpbn" style="color:var(--navy)">Rev</span><div class="bpbg"><div class="bpbf" style="width:40%;background:var(--navy);opacity:1"></div></div><span class="bpbv" style="color:var(--navy)">2.283</span></div><div class="bpbr"><span class="bpbn" style="color:var(--wine)">EBITDA</span><div class="bpbg"><div class="bpbf" style="width:2%;background:var(--wine);opacity:1"></div></div><span class="bpbv" style="color:var(--wine)">–90</span></div><div class="bpbr"><span class="bpbn" style="color:var(--wine)">EBIT</span><div class="bpbg"><div class="bpbf" style="width:7%;background:var(--wine);opacity:0.5"></div></div><span class="bpbv" style="color:var(--wine)">–382</span></div></div></div>
+<div class="bpy" class="proj"><span class="bpyl" style="color:var(--gold)">2026 P</span><div class="bpbi"><div class="bpbr"><span class="bpbn" style="color:var(--navy)">Rev</span><div class="bpbg"><div class="bpbf" style="width:57%;background:var(--navy);opacity:1"></div></div><span class="bpbv" style="color:var(--navy)">3.200</span></div><div class="bpbr"><span class="bpbn" style="color:var(--green)">EBITDA</span><div class="bpbg"><div class="bpbf" style="width:4%;background:var(--green);opacity:1"></div></div><span class="bpbv" style="color:var(--green)">+200</span></div><div class="bpbr"><span class="bpbn" style="color:var(--green)">EBIT</span><div class="bpbg"><div class="bpbf" style="width:0.4%;background:var(--green);opacity:0.5"></div></div><span class="bpbv" style="color:var(--green)">+10</span></div></div></div>
+<div class="bpy" class="proj"><span class="bpyl" style="color:var(--gold)">2027 P</span><div class="bpbi"><div class="bpbr"><span class="bpbn" style="color:var(--navy)">Rev</span><div class="bpbg"><div class="bpbf" style="width:78%;background:var(--navy);opacity:1"></div></div><span class="bpbv" style="color:var(--navy)">4.400</span></div><div class="bpbr"><span class="bpbn" style="color:var(--green)">EBITDA</span><div class="bpbg"><div class="bpbf" style="width:7%;background:var(--green);opacity:1"></div></div><span class="bpbv" style="color:var(--green)">+385</span></div><div class="bpbr"><span class="bpbn" style="color:var(--green)">EBIT</span><div class="bpbg"><div class="bpbf" style="width:3%;background:var(--green);opacity:0.5"></div></div><span class="bpbv" style="color:var(--green)">+166</span></div></div></div>
+<div class="bpy" class="proj"><span class="bpyl" style="color:var(--gold)">2028 P</span><div class="bpbi"><div class="bpbr"><span class="bpbn" style="color:var(--navy)">Rev</span><div class="bpbg"><div class="bpbf" style="width:100%;background:var(--navy);opacity:1"></div></div><span class="bpbv" style="color:var(--navy)">5.630</span></div><div class="bpbr"><span class="bpbn" style="color:var(--green)">EBITDA</span><div class="bpbg"><div class="bpbf" style="width:12%;background:var(--green);opacity:1"></div></div><span class="bpbv" style="color:var(--green)">+672</span></div><div class="bpbr"><span class="bpbn" style="color:var(--green)">EBIT</span><div class="bpbg"><div class="bpbf" style="width:7%;background:var(--green);opacity:0.5"></div></div><span class="bpbv" style="color:var(--green)">+390</span></div></div></div>
+</div></div></div>
+<div class="slide" id="p16"><div class="sh"><div class="sh"><div class="ha" style="background:var(--green)"></div><span class="hn">PAG 16</span><span class="ht">Business Lines</span><svg class="ico hi" width="30" height="30" style="color:var(--green)"><use href="#i-layers"/></svg></div></div><div class="sb"><div class="blg">
+<div>
+  <p class="slbl">Revenues K€ (2025)</p>
+  <div class="blr"><span class="bll" style="color:var(--navy)">B2B</span><div class="blbw"><div class="blb" style="width:79%;background:var(--navy)"></div></div><span class="blv" style="color:var(--navy)">1.809</span></div>
+  <div class="blr"><span class="bll" style="color:var(--green)">B2C</span><div class="blbw"><div class="blb" style="width:21%;background:var(--green)"></div></div><span class="blv" style="color:var(--green)">472</span></div>
+  <div class="dv"></div>
+  <table class="tb" style="font-size:12px"><thead><tr><th class="th-n">Anno</th><th class="th-n">B2B</th><th class="th-n">B2C</th></tr></thead>
+  <tbody>
+    <tr><td>2023</td><td style="color:var(--navy);font-weight:700">1.348</td><td style="color:var(--green);font-weight:700">639</td></tr>
+    <tr><td>2024</td><td style="color:var(--navy);font-weight:700">1.609</td><td style="color:var(--green);font-weight:700">774</td></tr>
+    <tr><td>2025</td><td style="color:var(--navy);font-weight:700">1.809</td><td style="color:var(--green);font-weight:700">472</td></tr>
+  </tbody></table>
+</div>
+<div>
+  <p class="slbl">EBITDA %</p>
+  <div class="gmg">
+    <div class="gmc"><div class="gmy">2023</div><div class="gmr"><div class="gmi"><span class="gml" style="color:var(--navy)">B2B</span><span class="gmv neg">–31%</span></div><div class="gmi"><span class="gml" style="color:var(--green)">B2C</span><span class="gmv neg">–100%</span></div></div></div>
+    <div class="gmc"><div class="gmy">2024</div><div class="gmr"><div class="gmi"><span class="gml" style="color:var(--navy)">B2B</span><span class="gmv neg">–12%</span></div><div class="gmi"><span class="gml" style="color:var(--green)">B2C</span><span class="gmv neg">–48%</span></div></div></div>
+    <div class="gmc" style="border:1.5px solid var(--green);background:var(--gr10)"><div class="gmy" style="color:var(--green)">2025 ✦</div><div class="gmr"><div class="gmi"><span class="gml" style="color:var(--navy)">B2B</span><span class="gmv pos">+2%</span></div><div class="gmi"><span class="gml" style="color:var(--green)">B2C</span><span class="gmv neg">–28%</span></div></div></div>
+  </div>
+</div>
+</div></div></div>
+<div class="slide" id="p17"><div class="sh"><div class="sh"><div class="ha" style="background:var(--wine)"></div><span class="hn">PAG 17</span><span class="ht">Scontrino Medio (€)</span><svg class="ico hi" width="30" height="30" style="color:var(--wine)"><use href="#i-rcpt"/></svg></div></div><div class="sb"><div class="scon">
+<div class="scc"><div class="sch" style="background:var(--wine)">Totale</div><div class="scb"><div class="scr"><span class="scy">2023</span><span class="scv" style="color:var(--wine)">€79</span></div><div class="scr"><span class="scy">2024</span><span class="scv" style="color:var(--wine)">€93</span></div><div class="scr"><span class="scy">2025</span><span class="scv" style="color:var(--wine)">€161</span></div></div></div>
+<div class="scc"><div class="sch" style="background:var(--navy)">B2B</div><div class="scb"><div class="scr"><span class="scy">2023</span><span class="scv" style="color:var(--navy)">€220</span></div><div class="scr"><span class="scy">2024</span><span class="scv" style="color:var(--navy)">€230</span></div><div class="scr"><span class="scy">2025</span><span class="scv" style="color:var(--navy)">€404</span></div></div></div>
+<div class="scc"><div class="sch" style="background:var(--green)">B2C</div><div class="scb"><div class="scr"><span class="scy">2023</span><span class="scv" style="color:var(--green)">€51</span></div><div class="scr"><span class="scy">2024</span><span class="scv" style="color:var(--green)">€50</span></div><div class="scr"><span class="scy">2025</span><span class="scv" style="color:var(--green)">€56</span></div></div></div>
+</div></div></div>
+<div class="slide" id="p18"><div class="sh"><div class="sh"><div class="ha" style="background:var(--green)"></div><span class="hn">PAG 18</span><span class="ht">Gross Margin</span><svg class="ico hi" width="30" height="30" style="color:var(--green)"><use href="#i-trend"/></svg></div></div><div class="sb"><div class="gmg">
+<div class="gmc"><div class="gmy">2023</div><div class="gmr"><div class="gmi"><span class="gml" style="color:var(--navy)">GM1</span><span class="gmv pos">16%</span></div><div class="gmi"><span class="gml" style="color:var(--green)">GM2</span><span class="gmv neg">–21%</span></div></div></div>
+<div class="gmc"><div class="gmy">2024</div><div class="gmr"><div class="gmi"><span class="gml" style="color:var(--navy)">GM1</span><span class="gmv pos">15%</span></div><div class="gmi"><span class="gml" style="color:var(--green)">GM2</span><span class="gmv neg">–5%</span></div></div></div>
+<div class="gmc" style="border:1.5px solid var(--green);background:var(--gr10)"><div class="gmy" style="color:var(--green)">2025 ✦</div><div class="gmr"><div class="gmi"><span class="gml" style="color:var(--navy)">GM1</span><span class="gmv pos">25%</span></div><div class="gmi"><span class="gml" style="color:var(--green)">GM2</span><span class="gmv pos">12%</span></div></div></div>
+</div>
+<div class="note note-gr" style="margin-top:18px">Il <strong>GM2 torna positivo nel 2025 (+12%)</strong> — primo anno con margine lordo dopo costi variabili in territorio positivo.</div></div></div>
+<div class="slide" id="p19"><div class="sh"><div class="sh"><div class="ha" style="background:var(--gold)"></div><span class="hn">PAG 19</span><span class="ht">Costi (% su Revenues)</span><svg class="ico hi" width="30" height="30" style="color:var(--gold)"><use href="#i-chart"/></svg></div></div><div class="sb"><div class="costg">
+<div class="costc"><div class="costl" style="color:var(--navy)">Overhead / Rev</div><div class="cyr"><span class="cyl">2023</span><span class="cyv" style="color:var(--wine)">67%</span></div><div class="cyb" style="width:100%;background:var(--wine);opacity:.65"></div><div class="cyr"><span class="cyl">2024</span><span class="cyv" style="color:var(--gold)">40%</span></div><div class="cyb" style="width:60%;background:var(--gold);opacity:.65"></div><div class="cyr"><span class="cyl">2025</span><span class="cyv" style="color:var(--green)">29%</span></div><div class="cyb" style="width:43%;background:var(--green);opacity:.65"></div></div>
+<div class="costc"><div class="costl" style="color:var(--wine)">Salaries / Rev</div><div class="cyr"><span class="cyl">2023</span><span class="cyv" style="color:var(--wine)">55%</span></div><div class="cyb" style="width:100%;background:var(--wine);opacity:.65"></div><div class="cyr"><span class="cyl">2024</span><span class="cyv" style="color:var(--gold)">36%</span></div><div class="cyb" style="width:65%;background:var(--gold);opacity:.65"></div><div class="cyr"><span class="cyl">2025</span><span class="cyv" style="color:var(--green)">27%</span></div><div class="cyb" style="width:49%;background:var(--green);opacity:.65"></div></div>
+<div class="costc"><div class="costl" style="color:var(--green)">Marketing / Rev</div><div class="cyr"><span class="cyl">2023</span><span class="cyv" style="color:var(--wine)">25%</span></div><div class="cyb" style="width:100%;background:var(--wine);opacity:.65"></div><div class="cyr"><span class="cyl">2024</span><span class="cyv" style="color:var(--gold)">10%</span></div><div class="cyb" style="width:40%;background:var(--gold);opacity:.65"></div><div class="cyr"><span class="cyl">2025</span><span class="cyv" style="color:var(--green)">5%</span></div><div class="cyb" style="width:20%;background:var(--green);opacity:.65"></div></div>
+<div class="costc"><div class="costl" style="color:var(--gold)">Other / Rev</div><div class="cyr"><span class="cyl">2023</span><span class="cyv" style="color:var(--wine)">13%</span></div><div class="cyb" style="width:100%;background:var(--wine);opacity:.65"></div><div class="cyr"><span class="cyl">2024</span><span class="cyv" style="color:var(--gold)">8%</span></div><div class="cyb" style="width:62%;background:var(--gold);opacity:.65"></div><div class="cyr"><span class="cyl">2025</span><span class="cyv" style="color:var(--green)">6%</span></div><div class="cyb" style="width:46%;background:var(--green);opacity:.65"></div></div>
+</div>
+<div class="note" style="margin-top:18px">Tutti i costi in rapporto ai ricavi sono in <strong>forte calo</strong> dal 2023 al 2025 — struttura operativa che scala efficientemente.</div></div></div>
+
+</body>
+</html>
